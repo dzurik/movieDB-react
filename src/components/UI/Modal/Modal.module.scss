@@ -1,0 +1,88 @@
+.Modal {
+  position: fixed;
+  z-index: 100;
+  height: auto;
+  width: 70%;
+  background: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 2rem 1rem 1rem 1rem;
+  transition: all 0.5s;
+
+  @media only screen and (max-width: 50em) {
+    width: 85%;
+  }
+}
+
+.Backdrop {
+  position: fixed;
+  z-index: 50;
+  height: 100%;
+  width: 100%;
+  background-color: #5c5c5c;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.ModalOpen {
+  animation: openModal 0.3s ease-out forwards;
+}
+
+.ModalClosed {
+  animation: closeModal 0.3s ease-out forwards;
+}
+
+.BackdropOpen {
+  animation: openBackdrop 0.3s;
+}
+
+.BackdropClosed {
+  animation: closeBackdrop 0.3s ease-out forwards;
+}
+
+@keyframes openModal {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes closeModal {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+@keyframes openBackdrop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeBackdrop {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

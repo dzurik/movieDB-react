@@ -1,0 +1,133 @@
+.FullMovie {
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  @media only screen and (orientation: portrait) and (max-width: 37.5em) {
+    flex-direction: column;
+  }
+}
+
+.CloseButton {
+  position: absolute;
+
+  font-size: 3rem;
+  top: -2rem;
+  right: -1rem;
+  cursor: pointer;
+  path {
+    stroke: #fff;
+  }
+  @media only screen and (max-width: 37.5em) {
+    display: none;
+  }
+}
+
+.CloseButtonMobile {
+  position: absolute;
+  display: none;
+
+  font-size: 3rem;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  path {
+    stroke: #fff;
+  }
+  @media only screen and (max-width: 37.5em) {
+    display: block;
+  }
+}
+
+.MovieImage {
+  height: 100%;
+
+  @media only screen and (max-width: 56.25em) {
+    height: 40rem;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    height: 35rem;
+  }
+
+  @media only screen and (max-width: 31.25em) {
+    height: 25rem;
+  }
+
+  @media only screen and (orientation: landscape) and(max-width: 56.25em) {
+    height: 30rem;
+  }
+}
+
+.Details {
+  padding: 0 2.5rem;
+  color: #fff;
+  position: relative;
+  align-self: flex-start;
+  width: 100%;
+
+  @media only screen and (max-width: 56.25em) {
+    height: auto;
+    font-size: 1.4rem;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    padding: 1rem;
+  }
+
+  h1 {
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width: 62.5em) {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.Overview {
+  margin: 2rem 0;
+}
+
+.List {
+  list-style-type: none;
+}
+
+.ListTitle {
+  margin-right: 3rem;
+  width: 5rem;
+  display: inline-block;
+}
+
+.ToIMdb {
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s;
+  outline: 0;
+  border: 0;
+
+  @media only screen and (max-width: 56.25em) {
+    height: auto;
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    outline: 0;
+    border: 0;
+    background-color: #f5c518;
+  }
+
+  &:active,
+  &:focus {
+    outline: 0;
+    border: 0;
+  }
+}

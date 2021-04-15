@@ -1,0 +1,78 @@
+.Movie {
+  position: relative;
+  img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border: 2px solid #222222;
+    border-radius: 5px;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+    &:hover .Overlay {
+      opacity: 1;
+    }
+  }
+  &:hover .Overlay {
+    opacity: 1;
+  }
+}
+
+.MovieTitle {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.Overlay {
+  position: absolute;
+  z-index: 2;
+  bottom: 3rem;
+  left: 0;
+  background-color: rgba(#ff6600, 0.9);
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+
+  opacity: 1;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (pointer: fine) {
+    opacity: 0;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+}
+
+.Title {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2rem;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+    pointer-events: none;
+  }
+}
